@@ -1,0 +1,69 @@
+# Common Features
+USER_ID_FIELD: userID
+ITEM_ID_FIELD: itemID
+
+filter_out_cod_start_users: True
+INTER_RATE: rating
+inter_file_name: 'elec.inter'
+
+# name of features
+vision_feature_file: 'image_feat.npy'
+text_feature_file: 'text_feat.npy'
+
+field_separator: "\t"
+
+## n_ui_layers: [1, 2, 3, 4]
+#n_ui_layers: [2]
+## n_mm_layers: [0, 1, 2, 3, 4]
+#n_mm_layers: [2]
+## n_hyper_layer: [1, 2, 3, 4]
+#n_hyper_layer: [1]
+#
+## hyper_num: [2, 4, 8, 16, 32, 64, 128, 256]
+#hyper_num: [4]
+## keep_rate: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+#keep_rate: [0.5]
+## alpha: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+#alpha: [0.3]
+## cl_weight : [0.0, 1e-06, 1e-05, 1e-04, 1e-03, 1e-02, 0.1]
+#cl_weight: [1e-04]
+## reg_weight : [0.0, 1e-06, 1e-05, 1e-04, 1e-03, 1e-02, 0.1]
+#reg_weight: [10e-06]
+#
+#embedding_size: 64
+#feat_embed_dim: 64
+#cf_model: lightgcn
+#
+## n_ui_layers: [1, 2, 3, 4]
+## n_mm_layers: [1, 2, 3, 4]
+## n_hyper_layer: [1, 2, 3, 4]
+## hyper_num: [2, 4, 8, 16, 32, 64, 128, 256]
+## keep_rate: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+## alpha: [0.0, 0.01, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+## cl_weight : [0.0, 1e-06, 1e-05, 1e-04, 1e-03, 1e-02, 0.1]
+## reg_weight : [0.0, 1e-06, 1e-05, 1e-04, 1e-03, 1e-02, 0.1]
+#
+#hyper_parameters: ["n_ui_layers", "n_mm_layers", "n_hyper_layer", "hyper_num", "keep_rate",  "alpha", "cl_weight", "reg_weight"]
+
+
+k_neighbour: 1
+is_neighbour: False
+embedding_size: 64
+feat_embed_dim: 64
+cf_model: lightgcn
+meta_weight: [1]
+n_meta_layer: [5]
+#att_weight: [ 0.1 ,0.05 ,0.2 ,0.3 ,0.5 ]
+#att_init: [ 0.3,0.1,0.2,0.4,0.5 ]
+n_ui_layers: [5]
+n_mm_layers: [2]
+reg_weight: [1e-06]
+
+#meta_weight: [ 1,0.9,0.8,0.7,0.6,0.5,0.4,0.3,0.2,0.1 ]
+#n_meta_layer: [ 8, 7, 6]
+##att_weight: [ 0.1 ,0.05 ,0.2 ,0.3 ,0.5 ]
+##att_init: [ 0.3,0.1,0.2,0.4,0.5 ]
+#n_ui_layers: [5]
+#n_mm_layers: [ 2, 3 ]
+#reg_weight: [ 1e-06, 1e-05 ]
+hyper_parameters: [ "n_ui_layers", "n_mm_layers",  "reg_weight",'meta_weight','n_meta_layer' ]
